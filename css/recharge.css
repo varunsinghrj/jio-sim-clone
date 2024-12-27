@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0052cc;
+    color: #fff;
+  }
+  
+  .header {
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-bar button {
+    background: #003a99;
+    color: white;
+    padding: 5px;
+  }
+  
+  .user-info,
+  .offer-timer {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .user-info span {
+    font-weight: bold;
+  }
+  
+  .offers {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .offers h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .offers h2 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .offer-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .offer-card {
+    background: #f0f4f7;
+    border: 1px solid #d0d7dd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .offer-header {
+    font-weight: bold;
+    background: #003a99;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .offer-price {
+    margin: 10px 0;
+  }
+  
+  .offer-price .price {
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  .offer-price .strike {
+    text-decoration: line-through;
+    color: red;
+    margin-left: 10px;
+  }
+  
+  .details-link {
+    text-decoration: none;
+    color: #0052cc;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .offer-details {
+    margin: 10px 0;
+  }
+  
+  .detail {
+    margin: 5px 0;
+  }
+  
+  .subscriptions img {
+    height: 30px;
+    margin-right: 5px;
+  }
+  
+  .recharge-btn {
+    background: #0052cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .recharge-btn:hover {
+    background: #003a99;
+  }
