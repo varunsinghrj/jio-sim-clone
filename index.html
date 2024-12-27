@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Recharge</title>
+  <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <button class="menu-icon">☰</button>
+      <div class="logo">Jio</div>
+    </div>
+    <div class="navbar-right">
+      <input type="text" class="search-bar" placeholder="Search">
+      <button class="profile-icon">👤</button>
+    </div>
+  </header>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <!-- Slide 1 -->
+      <div class="carousel-item" style="background-image: url('assets/annual-plan.webp');">
+        <div class="carousel-content">
+          <h1>Get your Jio SIM in no time</h1>
+          <p>Now order your Jio SIM and activate it yourself anytime, anywhere.</p>
+          <button class="primary-btn">Try Jio iActivate</button>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item" style="background-image: url('assets/iactivate-banner-desktop.webp');">
+        <div class="carousel-content">
+          <h1>Jio iActivate</h1>
+          <p>Simple. Smart. Secure.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Navigation -->
+    <div class="carousel-controls">
+      <button class="prev-btn">❮</button>
+      <button class="next-btn">❯</button>
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button class="indicator active" data-index="0"></button>
+      <button class="indicator" data-index="1"></button>
+    </div>
+  </div>
+  <!-- Recharge Section -->
+  <section class="recharge-section">
+    <h2><img src="assets/recharge-icon-27.webp" style=" height: 40px;" alt="Recharge Icon"> Mobile Recharge</h2>
+    <div class="providers">
+      <label>
+        <input type="radio" name="provider" value="jio" checked>
+        <img src="assets/jio.png" alt="Jio">
+      </label>
+      <label>
+        <input type="radio" name="provider" value="airtel">
+        <img src="assets/airtel.png" alt="Airtel">
+      </label>
+      <label>
+        <input type="radio" name="provider" value="vi">
+        <img src="assets/vi.png" alt="Vi">
+      </label>
+      <label>
+        <input type="radio" name="provider" value="bsnl">
+        <img src="assets/bsnl.png" alt="BSNL">
+      </label>
+    </div>
+    <div class="mobile-input">
+      <label for="mobile-number">Mobile Number</label>
+      <input type="text" id="mobile-number" placeholder="Enter 10 digit mobile number">
+    </div>
+    <div class="recharge-note">
+      <img src="assets/special.webp" alt="Info Icon">
+      Recharge with a ₹399 plan for a month full of digital delights.
+    </div>
+  </section>
+  <section class="services">
+    <div class="service-card">
+      <div class="icon recharge-icon"></div>
+      <p>Recharge</p>
+    </div>
+    <div class="service-card">
+      <div class="icon pay-bills-icon"></div>
+      <p>Pay Bills</p>
+    </div>
+    <div class="service-card">
+      <div class="icon get-sim-icon"></div>
+      <p>Get Jio SIM</p>
+    </div>
+    <div class="service-card">
+      <div class="icon port-to-jio-icon"></div>
+      <p>Port to Jio</p>
+    </div>
+    <div class="service-card">
+      <div class="icon get-jiofibre-icon"></div>
+      <p>Get JioFibre</p>
+    </div>
+    <div class="service-card">
+      <div class="icon support-icon"></div>
+      <p>Support</p>
+    </div>
+  </section>
+  <section class="features">
+    <div class="feature-card">
+      <div class="feature-image" id="entertainment"></div>
+      <div class="feature-text">
+        <h2>Go for unlimited entertainment</h2>
+        <p>Watch 900+ TV channels, stream content in more than 16 languages, and much more on the JioTV app.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-image" id="connectivity"></div>
+      <div class="feature-text">
+        <h2>High-speed, reliable connectivity</h2>
+        <p>Besides mobile internet at 4G speed, enjoy unlimited data, FREE calls & SMS, and more anywhere in India.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Product Section -->
+  <section class="product-section">
+    <h2>Our Products</h2>
+    <div class="product-container">
+      <div class="product-card">
+        <img src="assets/jio-phone.webp" alt="Product 1">
+        <div class="product-info">
+          <h3>Jio PHONE NEXT</h3>
+          <p>High-quality product with great features.</p>
+          <span class="price">₹5299.00</span>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="assets/watch.webp" alt="Product 2">
+        <div class="product-info">
+          <h3>Apple Watch Series7</h3>
+          <p>Reliable and affordable, perfect for daily use.</p>
+          <span class="price">₹53400.00</span>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="assets/jiobook.webp" alt="Product 3">
+        <div class="product-info">
+          <h3>JioBook</h3>
+          <p>Innovative design with cutting-edge technology.</p>
+          <span class="price">₹12999.00</span>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <h2>Latest Blog Posts</h2>
+    <p>Stay updated with our latest insights and stories</p>
+    <div class="blog-container">
+      <!-- Blog Card 1 -->
+      <div class="blog-card">
+        <img src="assets/bl1.png" alt="Blog 1">
+        <div class="blog-content">
+          <h3>How to Boost Productivity</h3>
+          <p>Discover simple tips and tricks to stay productive throughout the day.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+      <!-- Blog Card 2 -->
+      <div class="blog-card">
+        <img src="assets/bl2.png" alt="Blog 2">
+        <div class="blog-content">
+          <h3>The Future of Technology</h3>
+          <p>Explore the cutting-edge advancements that are shaping tomorrow's world.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+      <!-- Blog Card 3 -->
+      <div class="blog-card">
+        <img src="assets/bl3.png" alt="Blog 3">
+        <div class="blog-content">
+          <h3>Top Travel Destinations</h3>
+          <p>Plan your next adventure with our curated list of top travel spots.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="need-guidance">
+    <div class="container">
+        <h2>Need Guidance?</h2>
+        <p>We are here to help you with any assistance you need regarding Jio services.</p>
+        <div class="guidance-icons">
+            <div class="guidance-item" onclick="highlightItem(this)">
+                <i class="fas fa-phone-alt"></i>
+                <p>Contact Support</p>
+            </div>
+            <div class="guidance-item" onclick="highlightItem(this)">
+                <i class="fas fa-comments"></i>
+                <p>Live Chat</p>
+            </div>
+            <div class="guidance-item" onclick="highlightItem(this)">
+                <i class="fas fa-store"></i>
+                <p>Find a Store</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+     <!-- Footer Section -->
+     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are a leading mobile services provider, offering affordable plans and exceptional connectivity across the nation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +1800-123-4567</li>
+                    <li><i class="fas fa-envelope"></i> support@jio.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jio Office, Mumbai, India</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Download Our App</h3>
+                <div class="app-links">
+                    <a href="#"><img src="assets/google-play-store.jpg" alt="Google Play Store"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jio SIM. All Rights Reserved.</p>
+        </div>
+    </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
