@@ -17,9 +17,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #0052cc;
+    padding: 15px 20px;
+    background-color: rgb(29 78 216);
     color: #fff;
+    height: 2cm;
   }
   
   .navbar-left {
@@ -45,12 +46,21 @@
     display: flex;
     align-items: center;
   }
+  .search-bar::placeholder {
+    color: white; /* Makes placeholder text white */
+    opacity: 0.9;   /* Ensures full visibility of the color */
+  }
+  
   
   .search-bar {
+    background: #0a2885;
     border: none;
-    border-radius: 20px;
-    padding: 5px 10px;
-    margin-right: 10px;
+    border-radius: 1.625rem;
+    font-size: 1rem;
+    height: 2.4rem;
+    outline: none;
+    padding: 0 1.5rem 0 1rem;
+    width: 100%
   }
   
   .profile-icon {
@@ -177,84 +187,186 @@
     background-color: #0052cc;
   }
   
-  /* Recharge Section */
+ /* General Section Styling */
+.recharge-section {
+  max-width: 400px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Header with Icon */
+.recharge-section h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #1a1f36;
+  margin-bottom: 20px;
+}
+
+.recharge-section h2 .mobile-icon {
+  font-size: 1.8rem;
+  margin-right: 10px;
+  color: #1e73be;
+}
+
+.providers {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* For responsive design */
+}
+
+.providers label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.providers img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.providers img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.radio-wrapper input[type="radio"] {
+  appearance: none; /* Hide default radio */
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.radio-wrapper input[type="radio"]:checked {
+  border-color: #1e73be; /* Highlighted border when checked */
+  background-color: #1e73be;
+}
+
+.radio-wrapper input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio-wrapper label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Mobile Input Section */
+.mobile-input {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.mobile-input label {
+  display: block;
+  font-size: 0.9rem;
+  color: #1a1f36;
+  margin-bottom: 5px;
+}
+
+.mobile-input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+/* Recharge Note */
+.recharge-note {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #f5faff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recharge-note .special-offer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #1a1f36;
+}
+
+.recharge-note img {
+  width: 30px;
+  height: auto;
+}
+
+/* Recharge Button */
+#Recharge-box {
+  text-align: center;
+}
+
+#Recharge {
+  background-color: rgb(10 40 133);
+  color: #fff;
+  width: 250px;
+  height: 50px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#Recharge:hover {
+  background-color: rgb(10 40 133);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
   .recharge-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
   }
-  
-  .recharge-section h2 {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .providers {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  
-  .providers label {
-    cursor: pointer;
-  }
-  
+
   .providers img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
   }
-  
-  .mobile-input label {
-    display: block;
+
+  #Recharge {
     font-size: 0.9rem;
-    margin-bottom: 5px;
+    padding: 8px 16px;
   }
-  
-  .mobile-input input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .recharge-note {
-    display: flex;
-    align-items: center;
-    font-size: 0.9rem;
-    margin-top: 20px;
-  }
-  
-  .recharge-note img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
-  
-  /* Responsive Design */
-  @media (min-width: 768px) {
-    .hero {
-      flex-direction: row;
-      text-align: left;
-    }
-  
-    .hero-text {
-      flex: 1;
-    }
-  
-    .hero-image {
-      flex: 1;
-    }
-  
-    .hero-image img {
-        
-      width: 100%;
-      border-radius: 10px;
-    }
-  } 
+}
+
+
   /* Services Section */
 .services {
     display: grid;
@@ -944,7 +1056,11 @@ p {
 
 @media (max-width: 480px) {
   .carousel-item {
-    height: 150px; /* Further reduce height for mobile screens */
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: block;
+    height: 220px; /* Further reduce height for mobile screens */
   }
 
   .carousel-content h1 {
@@ -968,5 +1084,66 @@ p {
   .carousel-indicators .indicator {
     width: 8px; /* Smaller indicators for mobile */
     height: 8px;
+  }
+}
+/* General Styling for the Image Gallery */
+.image-gallery {
+  padding: 0px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.image-gallery h2 {
+  font-size: 1.8rem;
+  color: #1a1f36;
+  margin-bottom: 20px;
+}
+
+/* Gallery Grid Container */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Individual Gallery Items */
+.gallery-item {
+  flex: 1 1 calc(33.33% - 20px); /* Fit 3 items per row with gaps */
+  max-width: calc(33.33% - 20px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Hover Effect for Images
+.gallery-item:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 10px); /* Fit 2 items per row on tablets */
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 1 1 100%; /* Fit 1 item per row on small screens */
+    max-width: 100%;
   }
 }

@@ -7,6 +7,8 @@
   <title>Mobile Recharge</title>
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -14,17 +16,17 @@
     <div class="navbar-left"><button class="menu-icon">☰</button>
       <div class="logo">Jio</div>
     </div>
-    <div class="navbar-right"><input type="text" class="search-bar" placeholder="Search"><button
+    <div class="navbar-right"><input type="text" class="search-bar" placeholder="Search                            🔍"><button
         class="profile-icon">👤</button></div>
   </header>
   <div class="carousel-container">
     <div class="carousel">
-      <div class="carousel-item" style="background-image: url('assets/annual-plan.webp');">
-        <div class="carousel-content">
+      <div class="carousel-item" style="background-image: url('assets/slide1.webp');">
+        <!-- <div class="carousel-content">
           <h1>Get your Jio SIM in no time</h1>
           <p>Now order your Jio SIM and activate it yourself anytime, anywhere.</p><button class="primary-btn">Try Jio
             iActivate</button>
-        </div>
+        </div> -->
       </div>
       <div class="carousel-item" style="background-image: url('assets/iactivate-banner-desktop.webp');">
         <div class="carousel-content">
@@ -33,28 +35,91 @@
         </div>
       </div>
     </div>
-    <div class="carousel-controls"><button class="prev-btn">❮</button><button class="next-btn">❯</button></div>
+    <!-- <div class="carousel-controls"><button class="prev-btn">❮</button><button class="next-btn">❯</button></div>
     <div class="carousel-indicators"><button class="indicator active" data-index="0"></button><button class="indicator"
         data-index="1"></button></div>
-  </div>
+  </div> -->
   <section class="recharge-section">
-    <h2><img src="assets/recharge-icon-27.webp" style=" height: 40px;" alt="Recharge Icon"> Mobile Recharge</h2>
-    <div class="providers"><label><input type="radio" name="provider" value="jio" checked><img src="assets/jio.png"
-          alt="Jio"></label><label><input type="radio" name="provider" value="airtel"><img src="assets/airtel.png"
-          alt="Airtel"></label><label><input type="radio" name="provider" value="vi"><img src="assets/vi.png"
-          alt="Vi"></label><label><input type="radio" name="provider" value="bsnl"><img src="assets/bsnl.png"
-          alt="BSNL"></label></div>
-    <div class="mobile-input"><label for="mobile-number" id="mobile">Mobile Number</label>
-      <input type="text" id="mobileNumber"
-        placeholder="Enter 10 digit mobile number">
+    <h2>
+      <i class="fas fa-mobile-alt mobile-icon"></i>
+      Mobile Recharge
+    </h2>
+    <div class="providers">
+      <label>
+        <img src="assets/jio.png" alt="Jio">
+        <div class="radio-wrapper">
+          <input type="radio" name="provider" value="jio" id="jio" checked>
+          <label for="jio"></label>
+        </div>
+      </label>
+      <label>
+        <img src="assets/airtel.png" alt="Airtel">
+        <div class="radio-wrapper">
+          <input type="radio" name="provider" value="airtel" id="airtel">
+          <label for="airtel"></label>
+        </div>
+      </label>
+      <label>
+        <img src="assets/vi.png" alt="Vi">
+        <div class="radio-wrapper">
+          <input type="radio" name="provider" value="vi" id="vi">
+          <label for="vi"></label>
+        </div>
+      </label>
+      <label>
+        <img src="assets/bsnl.png" alt="BSNL">
+        <div class="radio-wrapper">
+          <input type="radio" name="provider" value="bsnl" id="bsnl">
+          <label for="bsnl"></label>
+        </div>
+      </label>
+    </div>
+    
+    <div class="mobile-input">
+      <label for="mobileNumber">Mobile Number</label>
+      <input type="text" id="mobileNumber" placeholder="Enter 10 digit mobile number">
+    </div>
+    <div class="recharge-note">
+      <div class="special-offer">
+        <img src="assets/special.webp" alt="Special Offer Icon">
+        Recharge with a ₹399 plan for a month full of digital delights.
       </div>
-    <div class="recharge-note"><img src="assets/special.webp" alt="Info Icon">Recharge with a ₹399 plan for a month full
-      of digital delights.</div>
+    </div>
     <div id="Recharge-box">
-      <button id="Recharge">Recharge now</button>
+      <button id="Recharge">Recharge</button>
     </div>
   </section>
-  <section class="services">
+  
+  <section class="image-gallery">
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="assets/bg-0.png" alt="Image 1">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/bg1.png" alt="Image 2">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/bg-2.png" alt="Image 3">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/bg-3.png" alt="Image 4">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/bg-5.png" alt="Image 5">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/bg-6.png" alt="Image 6">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/bg-4.png" alt="Image 7">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/footer.153f35181d1adde12abf.png" alt="Image 7">
+      </div>
+    </div>
+  </section>
+  
+  <!-- <section class="services">
     <div class="service-card">
       <div class="icon recharge-icon"></div>
       <p>Recharge</p>
@@ -203,7 +268,7 @@
     <div class="footer-bottom">
       <p>&copy; 2024 Jio SIM. All Rights Reserved.</p>
     </div>
-  </footer>
+  </footer> -->
   <script src="js/scripts.js"></script>
   
   <!-- for parsing the mobile number next -->
