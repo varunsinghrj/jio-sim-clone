@@ -1,12 +1,6 @@
 // Placeholder JS for form handling or additional interactions
 
-document.getElementById('mobile-number').addEventListener('input', function (e) {
-    const input = e.target;
-    const value = input.value;
-  
-    // Ensure only numbers are allowed
-    input.value = value.replace(/\D/g, '').slice(0, 10);
-  });
+
 // Select necessary elements
 const carousel = document.querySelector('.carousel');
 const items = document.querySelectorAll('.carousel-item');

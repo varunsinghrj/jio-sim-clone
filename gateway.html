@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Payment with UPI</title>
+    <style>
+      .shadow {
+        box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center px-4">
+    <div class="max-w-lg w-full p-4 mx-auto border rounded-lg">
+      <h2 class="text-2xl font-bold text-blue-600 mb-6 text-center">Billing Details</h2>
+
+      <p class="text-xl md:text-2xl pl-4 pb-3 text-center">
+        Mobile Number <span class="text-green-500 font-semibold" id="mobileNumber"></span>
+      </p>
+
+      <h1 class="text-xl md:text-2xl font-semibold mb-4 text-center">Pay with UPI</h1>
+      <form id="payment-form" class="space-y-4">
+        <div>
+          <h1 class="text-[16px] md:text-[20px] text-center">Amount ₹ <span class="amount" id="amount"></span></h1>
+        </div>
+      </form>
+
+      <div class="flex w-full md:w-[80%] mx-auto mt-6 md:mt-10 font-bold border-b border-black">
+        <button onclick="showOnlyDiv('upiDiv')" class="flex-1 py-2 shadow">UPI ID</button>
+      </div>
+
+      <div id="upiDiv" class="mt-6 text-center text-base md:text-lg px-4 md:px-12">
+        <div class="bg-cyan-100 text-cyan-800 font-semibold mx-auto flex items-center border-2 border-cyan-500 text-sm md:text-xl gap-2 p-2">
+          <p class="text-2xl md:text-3xl">🎉</p>
+          Win assured cashback up to Rs.200 on CRED UPI.
+        </div>
+        <h1 class="text-left mt-5 font-bold text-gray-600">PAY BY ANY UPI APP</h1>
+        <p class="text-left mb-5">Choose the app installed on your phone.</p>
+
+        <div class="flex flex-wrap gap-4 justify-center">
+          <!-- Google Pay -->
+          <div class="w-12 md:w-16 cursor-pointer h-12 md:h-16 rounded-lg border-2 flex items-center justify-center" onclick="payWithApp('googlePay')">
+            <img class="w-10 md:w-12 object-contain" src="https://i1.wp.com/www.aivanet.com/wp-content/uploads/2020/11/1606143674_8916958845781.png" alt="Google Pay" />
+          </div>
+
+          <!-- PhonePe -->
+          <div class="w-12 md:w-16 cursor-pointer h-12 md:h-16 rounded-lg border-2 flex items-center justify-center" onclick="payWithApp('phonePe')">
+            <img class="w-10 md:w-12 object-cover rounded-lg" src="https://flipkartstories.blob.core.windows.net/stories/2016/11/phonepe_mainbanner2.jpg" alt="PhonePe" />
+          </div>
+
+          <!-- Paytm -->
+          <div class="w-12 md:w-16 cursor-pointer h-12 md:h-16 rounded-lg border-2 flex items-center justify-center" onclick="payWithApp('paytm')">
+            <img class="w-10 md:w-12 object-contain" src="https://static.vecteezy.com/system/resources/previews/020/190/501/original/paytm-logo-paytm-icon-free-free-vector.jpg" alt="Paytm" />
+          </div>
+        </div>
+
+        <button class="mt-6 md:mt-10 rounded-lg bg-blue-500 text-white w-full py-2">Make Payment</button>
+      </div>
+
+      <div id="qrDiv" class="mt-6 text-center text-base md:text-lg hidden">
+        <p class="text-lg md:text-xl font-semibold mb-6 md:mb-10">Scan the QR Code to Pay</p>
+        <img src="assets/q2.jpeg" alt="QR Code" class="mx-auto mt-4 w-48 md:w-72 rounded-lg" />
+        <button class="mt-6 md:mt-10 rounded-lg bg-blue-500 text-white w-full md:w-[80%] py-2">Continue</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const mobileNumber = localStorage.getItem('mobile');
+        const amount = localStorage.getItem('price');
+
+        if (mobileNumber) {
+          document.getElementById('mobileNumber').innerText = mobileNumber;
+        }
+        if (amount) {
+          document.getElementById('amount').innerText = amount;
+        }
+      });
+
+      function showOnlyDiv(divId) {
+        const allDivs = ['upiDiv', 'qrDiv'];
+        allDivs.forEach((id) => {
+          document.getElementById(id).classList.toggle('hidden', id !== divId);
+        });
+      }
+
+      function payWithApp(app) {
+        let upiID = '';
+        const amount = document.getElementById('amount').innerText;
+        const payeeName = 'John Doe';
+        const transactionID = 'sdgf-123x-123s-ljj3';
+
+        switch (app) {
+          case 'googlePay':
+            upiID = 'rajveerbana183-1@okhdfcbank';
+            break;
+          case 'phonePe':
+            upiID = 'rajveerbana67@ybl';
+            break;
+          case 'paytm':
+            upiID = 'paytm.s18v52f@pty';
+            break;
+          default:
+            alert('Invalid payment option.');
+            return;
+        }
+
+        const upiURL = `upi://pay?pa=${upiID}&pn=${payeeName}&tid=${transactionID}&am=${amount}&cu=INR`;
+
+        if (/android|iphone|ipad|ipod/i.test(navigator.userAgent)) {
+          window.location.href = upiURL;
+        } else {
+          alert('This payment option is only available on mobile devices.');
+        }
+      }
+    </script>
+  </body>
+</html>
